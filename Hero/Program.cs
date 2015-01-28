@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Hero
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            /*1. The	Hero	Class	must	include	the	following	Properties and	Methods: (21 Marks:	Functionality):
+﻿
+/*1. The	Hero	Class	must	include	the	following	Properties and	Methods: (21 Marks:	Functionality):
                 a. Private Properties:	strength (int),	speed (int),	health (int)	(3	Marks:	Functionality).
                 b. Public Properties:	name (string)	(1	Marks:	Functionality).
                 c. The	constructor Method should	take	one	parameter,	name (string)	and	pass	its value	to	
@@ -36,6 +25,19 @@ namespace Hero
                 b. Ensure	your	program	uses	contextual	variable	names	that	help	make	the	program	
                 human-readable	(2	Marks:	Documentation).
              */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hero
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
         }
     }
 }
