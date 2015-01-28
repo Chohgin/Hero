@@ -14,7 +14,7 @@ namespace Hero
         public string name;
 
         //Constructor
-        public void heroCreate(string name)
+        public Hero(string name)
         {
             this.name = name;
             generateAbility();
@@ -28,6 +28,10 @@ namespace Hero
             this.speed = stat.Next(0, 100);
             this.strength = stat.Next(0, 100);
             this.health = stat.Next(0, 100);
+            //Console.WriteLine("stats");
+            //Console.WriteLine("Speed: {0}",speed);
+            //Console.WriteLine("Strength: {0}",strength);
+            //Console.WriteLine("Health: {0}",health);
         }
 
     }

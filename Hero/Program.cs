@@ -38,6 +38,16 @@ namespace Hero
         static void Main(string[] args)
         {
             
+
+            Console.WriteLine("Choose a name, Hero: ");
+            string name = Console.ReadLine();
+
+            Hero Hero1 = new Hero(name);
+
+            
+
+            Console.ReadKey();
+
         }
     }
 }
