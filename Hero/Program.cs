@@ -41,7 +41,7 @@ namespace Hero
 
             Console.WriteLine("Choose a name, Hero: ");
             string name = Console.ReadLine();
-
+            //a hero is born
             Hero Hero1 = new Hero(name);
 
             
