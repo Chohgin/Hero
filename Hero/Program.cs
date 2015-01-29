@@ -44,6 +44,9 @@ namespace Hero
             //a hero is born
             Hero Hero1 = new Hero(name);
 
+            Hero1.showStats();
+
+            Hero1.fight();
             
 
             Console.ReadKey();

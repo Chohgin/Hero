@@ -75,5 +75,14 @@ namespace Hero
 
             return damage;
         }
+
+        public void showStats()
+        {
+            Console.WriteLine("Hero Name: {0}",this.name);
+            Console.WriteLine("Speed: {0}",this.speed);
+            Console.WriteLine("Strength: {0}",this.strength);
+            Console.WriteLine("Health: {0}",this.health);
+        }
+
     }
 }
