@@ -36,13 +36,24 @@ namespace Hero
 
         public void fight()
         {
+            bool hit;
+            hit = hitAttempt();
 
+            if (hit = true)
+            {
+                int damage = hitDamage();
+                Console.WriteLine("{0} hit the enemy for {1} points", this.name, damage);
+            }
+            else
+            {
+                Console.WriteLine("{0} missed.", this.name);
+            }
         }
         private bool hitAttempt()
         {
             bool hit = false;
             Random strike = new Random();
-            int shot = strike.Next(1, 6);
+            int shot = strike.Next(1, 5);
 
             if (shot == 1)
             {
@@ -55,9 +66,14 @@ namespace Hero
             return hit;
         }
 
-        private void hitDamage()
+        private int hitDamage()
         {
+            Random multiplier = new Random();
+            int damage = 0;
 
+            damage = this.strength * multiplier.Next(1, 6);
+
+            return damage;
         }
     }
 }
