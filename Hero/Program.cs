@@ -1,4 +1,8 @@
 ﻿
+//Nicholas Walker
+//30/01/2015
+//Hero project creates a Hero by calling the Hero class, enacting methods to assign values, then outputs the methods and rolls a check for a fight, determining if the hero sucessfully strikes his oppoent.
+
 /*1. The	Hero	Class	must	include	the	following	Properties and	Methods: (21 Marks:	Functionality):
                 a. Private Properties:	strength (int),	speed (int),	health (int)	(3	Marks:	Functionality).
                 b. Public Properties:	name (string)	(1	Marks:	Functionality).
