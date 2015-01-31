@@ -33,12 +33,14 @@ namespace Hero
             //}
             
         }
-
+        // fight method
         public void fight()
         {
             bool hit;
+            //Calls hitAttempt method
             hit = hitAttempt();
 
+            //decides if the player hits and calls the hitDamage appropriately
             if (hit = true)
             {
                 int damage = hitDamage();
@@ -49,6 +51,8 @@ namespace Hero
                 Console.WriteLine("{0} missed.", this.name);
             }
         }
+
+        // hitAttempt
         private bool hitAttempt()
         {
             bool hit = false;
@@ -65,7 +69,7 @@ namespace Hero
             }
             return hit;
         }
-
+        // hitDamage
         private int hitDamage()
         {
             Random multiplier = new Random();
@@ -76,6 +80,7 @@ namespace Hero
             return damage;
         }
 
+        // showStats
         public void showStats()
         {
             Console.WriteLine("Hero Name: {0}",this.name);

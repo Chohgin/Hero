@@ -44,8 +44,9 @@ namespace Hero
             //a hero is born
             Hero Hero1 = new Hero(name);
 
+            //Calls showStats method from the Hero Class
             Hero1.showStats();
-
+            //Calls fight method from the Hero Class
             Hero1.fight();
             
 
