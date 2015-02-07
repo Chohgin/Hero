@@ -8,28 +8,37 @@ namespace Hero
 {
     class SuperHero : Hero
     {
-        private string[] superPowers;
+        private string[] superPowers = {"Super Speed","Super Strength","Body Armour","Flight","Fire Generation","Weather Control"};
         public SuperHero(string name) : base (name)
         {
-            generateRandomPowers();
+            generateRandomPowers(superPowers);
         }
 
-        private void generateRandomPowers()
+        private void generateRandomPowers(string[] superPowers)
         {
-            for (int i = 0; i < 300; i++)
+            Random power = new Random();
+            int powerNum1 = 0;
+            int powerNum2 = 0;
+            int powerNum3 = 0;
+            powerNum1 = power.Next(1, 6);
+
+            do
             {
-                Random power = new Random();
-                int power1 = 0;
-                int power2 = 0;
-                int power3 = 0;
-                while (power1 != power2 && power1 != power3 && power2 != power3)
-                {
-                    power1 = power.Next(1, 6);
-                    power2 = power.Next(1, 6);
-                    power3 = power.Next(1, 6);
-                }
-                Console.WriteLine("{0,5}{1,5}{2,5}", power1, power2, power3);
-            }
+                powerNum2 = power.Next(1, 6);
+            } while (powerNum2 == powerNum1);
+            do
+            {
+                powerNum3 = power.Next(1, 6);
+            } while (powerNum3 == powerNum1 || powerNum3 == powerNum2);
+            //Console.WriteLine("{0,5}{1,5}{2,5}", power1, power2, power3);
+
+            string power1 = superPowers[powerNum1];
+            string power2 = superPowers[powerNum2];
+            string power3 = superPowers[powerNum3];
+        }
+        public void showPowers()
+        {
+
         }
 
     }
