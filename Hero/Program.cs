@@ -44,23 +44,28 @@ namespace Hero
     {
         static void Main(string[] args)
         {
-            
 
-           //Console.WriteLine("Choose a name, Hero: ");
-           //string name = Console.ReadLine();
-           ////a hero is born
-           //Hero Hero1 = new Hero(name);
-           //
-           ////Calls showStats method from the Hero Class
-           //Hero1.showStats();
-           ////Calls fight method from the Hero Class
-           //Hero1.fight();
-           //
-           //         
-            //for (int i = 0; i < 300; i++)
-            //{
-                SuperHero SuperHero = new SuperHero("billy");
-            //}
+           Console.WriteLine("Are you a superhero or a hero? ");
+           string choice = Console.ReadLine().ToUpper();
+           Console.WriteLine("Choose a name, Hero: ");
+           string name = Console.ReadLine();
+
+           if (choice == "HERO")
+           {
+               //a hero is born
+               Hero Hero1 = new Hero(name);
+
+               //Calls showStats method from the Hero Class
+               Hero1.showStats();
+               //Calls fight method from the Hero Class
+               Hero1.fight();
+           }
+           else if (choice == "SUPERHERO")
+           {
+                SuperHero SuperHero = new SuperHero(name);
+                SuperHero.showPowers();
+           }
+           
             Console.ReadKey();
 
         }

@@ -59,12 +59,12 @@ namespace Hero
                   
             }
 
-        public void showPowers(string finalPowers)
+        public void showPowers()
         {
             Console.WriteLine("++++++++++++++");
-            for (int i = 1; i <=3;i++)
+            for (int i = 0; i < 3;i++)
             {
-                Console.WriteLine("Power 1: {0}",finalPowers[i]);
+                Console.WriteLine("Power {1}: {0}",finalPowers[i],i+1);
             }
             
         }
