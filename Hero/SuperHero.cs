@@ -10,9 +10,9 @@ namespace Hero
     {
         private string[] superPowers = {"Super Speed","Super Strength","Body Armour","Flight","Fire Generation","Weather Control"};
       
-        private string[] holding = new string[superPowers.Length];
+        private string[] holding;
 
-        private string[] finalPowers = new string[3]; // constructor Notation
+        private string[] finalPowers = new string[3];
 
        
             
@@ -20,6 +20,7 @@ namespace Hero
         public SuperHero(string name) : base (name)
         {
             Random power = new Random();
+            this.holding = new string[this.superPowers.Length];
                         
              for (int i = 0; i < superPowers.Length; i++)
             {
@@ -49,54 +50,30 @@ namespace Hero
 
         private int generateRandomPowers(Random power, int cap)
         {
-            
-            
+                      
            
-            int number;
-
-
-            
+            int number;            
 
             number = power.Next(cap);
-            //Console.WriteLine("My Random car is {0}", number); // Debugging line
-            return number;
-                     
-
-
-            
-
-
-            // Assign cells from one array to another
-
-          
-
-
+            return number;               
+                  
             }
-           //int powerNum1 = 0;
-           //int powerNum2 = 0;
-           //int powerNum3 = 0;
-           //powerNum1 = power.Next(1, 6);
-           //
-           //do
-           //{
-           //    powerNum2 = power.Next(1, 6);
-           //} while (powerNum2 == powerNum1);
-           //do
-           //{
-           //    powerNum3 = power.Next(1, 6);
-           //} while (powerNum3 == powerNum1 || powerNum3 == powerNum2);
-           ////Console.WriteLine("{0,5}{1,5}{2,5}", power1, power2, power3);
-           //
-           //string power1 = superPowers[powerNum1];
-           //string power2 = superPowers[powerNum2];
-           //string power3 = superPowers[powerNum3];
-        }
 
-
-        public void showPowers()
+        public void showPowers(string finalPowers)
         {
-
+            Console.WriteLine("++++++++++++++");
+            for (int i = 1; i <=3;i++)
+            {
+                Console.WriteLine("Power 1: {0}",finalPowers[i]);
+            }
+            
         }
+         
+        }
+
+
+        
+    
 
     }
-}
+
