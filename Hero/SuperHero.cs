@@ -8,20 +8,23 @@ namespace Hero
 {
     class SuperHero : Hero
     {
+        //All powers
         private string[] superPowers = {"Super Speed","Super Strength","Body Armour","Flight","Fire Generation","Weather Control"};
-      
+      //Power holding point
         private string[] holding;
-
+        //powers received
         private string[] finalPowers = new string[3];
 
        
             
-
+        //SuperHero constructor
         public SuperHero(string name) : base (name)
         {
+            //randomly generates the powers
             Random power = new Random();
+            //Moves superPowers to the holding area    
             this.holding = new string[this.superPowers.Length];
-                        
+               
              for (int i = 0; i < superPowers.Length; i++)
             {
                 holding[i] = superPowers[i];
@@ -30,7 +33,7 @@ namespace Hero
             int randomPower;
 
             int count = 0;
-
+            //determines which powers are received with no duplicates
             while (count < finalPowers.Length)
             {
                 randomPower = generateRandomPowers(power, superPowers.Length);
@@ -47,7 +50,7 @@ namespace Hero
             }
 
         }
-
+        //generates the powers
         private int generateRandomPowers(Random power, int cap)
         {
                       
@@ -58,7 +61,7 @@ namespace Hero
             return number;               
                   
             }
-
+        //displays the powers
         public void showPowers()
         {
             Console.WriteLine("++++++++++++++");

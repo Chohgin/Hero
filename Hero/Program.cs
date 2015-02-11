@@ -62,8 +62,14 @@ namespace Hero
            }
            else if (choice == "SUPERHERO")
            {
+               //The Hero this city needs
                 SuperHero SuperHero = new SuperHero(name);
+                //Calls showStats method from the Hero Class
+                SuperHero.showStats();
+               //Calls showStats method from the SuperHero Class
                 SuperHero.showPowers();
+                //Calls fight method from the Hero Class
+                SuperHero.fight();
            }
            
             Console.ReadKey();
